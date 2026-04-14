@@ -1,7 +1,7 @@
 {
   "name": "alpinejs-plugin-template",
   "version": "1.0.0",
-  "description": "Template for building Alpine.js plugins.",
+  "description": "A plugin for Alpine.js that provides a simple way to manage screen states and transitions.",
   "type": "module",
   "main": "dist/index.js",
   "module": "dist/index.js",
