@@ -1,5 +1,7 @@
 # Alpine Screen Plugin
 
+[![npm version](https://img.shields.io/npm/v/alpine-screens.svg)](https://www.npmjs.com/package/alpine-screens)
+
 Small Alpine plugin for screen-based UI flow (title, playing, win, etc.).
 
 ## What It Adds
@@ -19,12 +21,12 @@ Small Alpine plugin for screen-based UI flow (title, playing, win, etc.).
 ### ESM
 
 ```sh
-npm install alpinejs-plugin-template
+npm install alpine-screens
 ```
 
 ```js
 import Alpine from 'alpinejs';
-import screenPlugin from 'alpinejs-plugin-template';
+import screenPlugin from 'alpine-screens';
 
 Alpine.plugin(screenPlugin({ initialScreen: 'title' }));
 Alpine.start();
@@ -35,7 +37,7 @@ Alpine.start();
 Load the plugin script before Alpine so it can register during Alpine init.
 
 ```html
-<script defer src="https://unpkg.com/alpinejs-plugin-template@latest/dist/cdn.min.js"></script>
+<script defer src="https://unpkg.com/alpine-screens@latest/dist/cdn.min.js"></script>
 <script defer src="https://unpkg.com/alpinejs@latest/dist/cdn.min.js"></script>
 ```
 
@@ -142,7 +144,7 @@ You can configure the plugin with `storeName` and `initialScreen`:
 
 ```js
 import Alpine from 'alpinejs';
-import screenPlugin from 'alpinejs-plugin-template';
+import screenPlugin from 'alpine-screens';
 
 Alpine.plugin(screenPlugin({
 	storeName: 'ui',
