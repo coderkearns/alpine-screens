@@ -157,7 +157,7 @@ Then access it with `$store.ui.currentScreen`.
 
 ### Options
 
-- `storeName` (string, default: `screen`): Name of the Alpine store.
+- `storeName` (string, default: `screens`): Name of the Alpine store.
 - `initialScreen` (string | null, default: `null`): The first active screen when Alpine initializes.
 
 ## Release

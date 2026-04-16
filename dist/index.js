@@ -1,7 +1,7 @@
 //#region src/index.js
 /**
 * @typedef {Object} ScreensPluginOptions
-* @property {string} [storeName="screen"] - Alpine store name used by the plugin.
+* @property {string} [storeName="screens"] - Alpine store name used by the plugin.
 * @property {string | null} [initialScreen=null] - Initial active screen, null if none.
 */
 /**
@@ -9,7 +9,7 @@
 * @param {ScreensPluginOptions} [options]
 * @returns {(Alpine: import('alpinejs').Alpine) => void}
 */
-function screensPlugin({ storeName = "screen", initialScreen = null } = {}) {
+function screensPlugin({ storeName = "screens", initialScreen = null } = {}) {
 	return (Alpine) => {
 		Alpine.store(storeName, {
 			currentScreen: initialScreen,
