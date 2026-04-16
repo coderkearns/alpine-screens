@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>alpine-screens simple example</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      max-width: 42rem;
+      margin: 2rem auto;
+      padding: 0 1rem;
+      line-height: 1.4;
+    }
+
+    section {
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 1rem;
+      margin: 0.75rem 0;
+    }
+
+    button {
+      margin-right: 0.5rem;
+    }
+
+    [x-cloak] {
+      display: none !important;
+    }
+  </style>
+
+  <script defer src="../dist/cdn.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+</head>
+<body>
+  <h1>alpine-screens: simple example</h1>
+
+  <div x-data x-init="$changeScreen('title')" x-cloak>
+    <p>Current screen: <strong x-text="$store.screens.currentScreen || 'none'"></strong></p>
+
+    <section x-screen="title">
+      <h2>Title</h2>
+      <p>This is the title screen.</p>
+      <button @click="$changeScreen('playing')">Start</button>
+    </section>
+
+    <section x-screen="playing">
+      <h2>Playing</h2>
+      <p>This is the playing screen.</p>
+      <button @click="$changeScreen('win')">Win</button>
+      <button @click="$changeScreen('title')">Back</button>
+    </section>
+
+    <section x-screen="win">
+      <h2>Win</h2>
+      <p>You won.</p>
+      <button @click="$changeScreen('title')">Play again</button>
+    </section>
+  </div>
+</body>
+</html>
