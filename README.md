@@ -1,4 +1,4 @@
-# Alpine Screen Plugin
+# Alpine Screens Plugin
 
 [![npm version](https://img.shields.io/npm/v/alpine-screens.svg)](https://www.npmjs.com/package/alpine-screens)
 
